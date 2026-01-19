@@ -1,46 +1,36 @@
-function hamburg(){
-    const navbar = document.querySelector('.dropdown');
-    navbar.style.transform = 'translateY(0px)';
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const yearEl = document.getElementById("year");
+
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+  });
+
+  // close menu when click a link
+  mobileMenu.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => mobileMenu.classList.remove("open"));
+  });
 }
 
-function cancel(){
-    const navbar = document.querySelector('.dropdown');
-    navbar.style.transform = 'translateY(-500px)';
+// active nav link on scroll
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+function setActiveLink() {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (window.scrollY >= sectionTop) current = section.getAttribute("id");
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) link.classList.add("active");
+  });
 }
 
-const texts = [
-    "DEVELOPER",
-    "PROGRAMMER"
-];
-
-let speed = 100;
-
-const textElements = document.querySelector('.typewriter-text');
-
-let textIndex = 0;
-let characterIndex = 0;
-
-function typeWriter(){
-    if(characterIndex < texts[textIndex].length){
-        textElements.innerHTML += texts[textIndex].charAt(characterIndex);
-        characterIndex++;
-        setTimeout(typeWriter, speed);
-    }
-    else{
-        setTimeout(eraseText, 1000);
-    }
-}
-
-function eraseText(){
-    if(textElements.innerHTML.length > 0){
-        textElements.innerHTML = textElements.innerHTML.slice(0, -1);
-        setTimeout(eraseText, 50);
-    }
-    else{
-        textIndex = (textIndex + 1) % texts.length;
-        characterIndex = 0;
-        setTimeout(typeWriter, 500);
-    }
-}
-
-window.onload = typeWriter;
+window.addEventListener("scroll", setActiveLink);
+setActiveLink();
