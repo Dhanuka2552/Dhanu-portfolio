@@ -191,9 +191,13 @@ body{
   padding:18px;
   box-shadow:var(--shadow);
 }
+.project{
+  display:flex;
+  flex-direction:column;
+}
 .project h3, .skill-card h3{margin:0 0 10px}
 .project p{margin:8px 0}
-.p-links{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+.p-links{display:flex; gap:10px; flex-wrap:wrap; margin-top:auto; padding-top:10px}
 
 .skill-card ul{margin:0; padding-left:18px; line-height:1.9; color:var(--muted)}
 
@@ -406,5 +410,6 @@ body{
 }
 
 .project-links{
-  margin-top: 111px;
+  margin-top: auto;
+  padding-top: 20px;
 }

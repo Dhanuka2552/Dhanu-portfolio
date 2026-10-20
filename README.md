@@ -41,6 +41,14 @@ Dhanuka-portfolio/
 4. Select **Open with Live Server**
 
 ## 📁 Projects Included
+- **LibraSys - Smart Library and Digital Archive Management System**  
+  Scalable microservices-based backend system built with Spring Boot 3, Spring Cloud Gateway, Netflix Eureka, React 18, MongoDB, Redis, and Docker.  
+  GitHub: https://github.com/Dhanuka2552/librasys-microservices
+
+- **AgriShield AI**  
+  Multi-Agent AI Agriculture Disease Assistant with FAISS RAG helping Sri Lankan farmers diagnose crop diseases and treatment in Sinhala & English.  
+  GitHub: https://github.com/Dhanuka2552/Agriculture-Disease-Assistant-new
+
 - **Food Delivery System**  
   Online food ordering system with admin and user roles  
   GitHub: https://github.com/Dhanuka2552/food-Delivery-Items.git
