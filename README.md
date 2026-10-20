@@ -65,7 +65,7 @@ Dhanuka-portfolio/
 - Facebook: https://web.facebook.com/profile.php?id=100084872520298
 
 ## 📄 Resume
-Click the **Download Resume** button on the website to download my CV (`cv.pdf`).
+Click the **Download Resume** button on the website to download my CV (`dhanucv.pdf`).
 
 ## 📜 License
 This project is created for **learning and personal portfolio use**.  
